@@ -1,59 +1,278 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
-
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+  <img src="https://img.shields.io/badge/Laravel-12-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" alt="Laravel 12">
+  <img src="https://img.shields.io/badge/Tailwind_CSS-3-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind CSS">
+  <img src="https://img.shields.io/badge/Alpine.js-3-8BC0D0?style=for-the-badge&logo=alpinedotjs&logoColor=white" alt="Alpine.js">
+  <img src="https://img.shields.io/badge/Vite-5-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite">
+  <img src="https://img.shields.io/badge/PHP-8.2+-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP 8.2+">
 </p>
 
-## About Laravel
+<h1 align="center">🧬 ISNIP — Integrated SNP Identification Pipeline</h1>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+<p align="center">
+  <strong>Platform Analisis Genomik Berbasis Web untuk Identifikasi <em>Single Nucleotide Polymorphism</em> (SNP)</strong>
+</p>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+<p align="center">
+  <em>Capstone Project — Sekolah Sains Data, Matematika, dan Informatika, IPB University (2026)</em>
+</p>
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+## 📖 Tentang Proyek
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+**ISNIP (Integrated SNP Identification Pipeline)** adalah platform berbasis web yang mengintegrasikan berbagai tahapan analisis bioinformatika — meliputi kontrol kualitas *reads*, pemetaan (*mapping*) ke genom referensi, dan pemanggilan varian (*variant calling*) — ke dalam satu alur kerja otomatis dan terpadu.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Proyek ini merupakan **redesign menyeluruh** pada antarmuka pengguna (UI/UX) aplikasi ISNIP, yang mentransformasi tampilan lama yang kaku dan non-responsif menjadi antarmuka modern, intuitif, dan sepenuhnya responsif menggunakan *tech stack* front-end terkini.
 
-## Laravel Sponsors
+### ✨ Mengapa ISNIP 2026?
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+| Aspek | Versi Lama ❌ | Versi Baru ✅ |
+|-------|:----------:|:----------:|
+| UI Modern & Responsif | Tata letak statis, non-responsif | Flexbox/Grid, sepenuhnya responsif |
+| Upload Data | Bergantung pada administrator | *Self-service* melalui antarmuka web |
+| Alur *Job Submission* | Formulir tunggal yang padat | Modal interaktif *step-by-step* |
+| Pemantauan *Job* | Tidak informatif | *Badge* status berwarna + *Live Refreshing* |
+| Tech Stack | Teknologi usang | Laravel 12 + Tailwind CSS + Alpine.js + Vite |
+| Navigasi | Tidak terstruktur | *Sidebar* berbasis *workflow* dengan indikator aktif |
+| Validasi Input | Hanya *server-side* | *Client-side* (Alpine.js) + *server-side* |
+| Aksesibilitas Perangkat | Hanya *desktop* tertentu | *Desktop*, *tablet*, dan *mobile* |
 
-### Premium Partners
+---
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+## 🚀 Fitur Utama
 
-## Contributing
+### 🏠 Dashboard Informatif
+- Halaman utama dengan *hero section* bergradien modern
+- Kartu-kartu fitur dengan desain konsisten dan *hover effects*
+- Tombol CTA kontekstual berdasarkan status autentikasi
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### 📤 Self-Service Upload
+- Upload mandiri data referensi (*reference genome*) dan data *query* (*reads*)
+- Zona *drag-and-drop* yang responsif
+- Validasi format file (`.fa`, `.fasta`, `.fastq`, `.fq`, `.gz`, `.fastq.gz`, `.fq.gz`) dan ukuran file (maks. 5 GB) secara *client-side*
+- Eliminasi ketergantungan pada administrator
 
-## Code of Conduct
+### 📋 Submit Job Pipeline (Step-by-Step Modal)
+- Komponen modal interaktif bertahap ditenagai Alpine.js
+- Konfigurasi parameter Bowtie2 dan Samtools secara terstruktur
+- Validasi per tahap dengan transisi animasi yang mulus
+- Pemilihan sumber *reads* dan tipe *reads* secara kondisional
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### 📊 Job Monitoring
+- Panel metrik statistik (Total Analyses, Currently Running, Storage Used, Avg. Runtime)
+- Tabel riwayat *job* dengan *badge* status berwarna:
+  - 🔵 **Submitted** — Indigo badge
+  - 🔷 **Running** — Sky badge dengan animasi pulse
+  - 🟢 **Finished** — Emerald badge
+  - 🔴 **Canceled** — Red badge
+- **Live Refreshing** otomatis setiap 4 detik untuk *job* aktif
 
-## Security Vulnerabilities
+### 🔍 Search Analysis
+- Pencarian dan *query* data SNP yang teridentifikasi
+- Tampilan hasil dalam format tabel responsif (posisi genomik, tipe varian, kualitas varian)
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### 🔐 Sistem Autentikasi
+- Halaman *login* dan *register* dengan desain konsisten
+- Validasi *client-side* dan *server-side*
 
-## License
+---
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## 🛠️ Tech Stack
+
+| Teknologi | Versi | Peran |
+|-----------|-------|-------|
+| **Laravel** | 12 | Framework PHP (MVC), Blade Templating Engine |
+| **Tailwind CSS** | 3.x | *Utility-first CSS framework*, sistem desain kustom |
+| **Alpine.js** | 3.x | Interaktivitas komponen *client-side* (modal, dropdown, validasi) |
+| **Vite** | 5.x | *Build tool* dengan HMR instan & *production bundling* |
+| **PHP** | ≥ 8.2 | Bahasa pemrograman *backend* |
+| **MySQL/SQLite** | - | Basis data |
+
+### 🎨 Design System
+
+Sistem desain kustom didefinisikan melalui `tailwind.config.js`:
+
+- **Brand Colors** — `brand-primary` (#1E3A5F), `brand-mid` (#1D4E8F), `brand-light` (#2D6BC4), `brand-subtle` (#EEF4FF)
+- **Surface Colors** — `surface-page` (#F0F4F8), `surface-card` (#FFFFFF), `surface-sidebar` (#1E3A5F)
+- **Text Colors** — `text-primary` (#1A2332), `text-secondary` (#4A5568), `text-muted` (#718096)
+- **Typography** — *Instrument Sans*, *Inter* (UI), *JetBrains Mono* (data teknis)
+
+---
+
+## 📁 Struktur Proyek
+
+```
+ISNIP2026/
+├── app/                        # Logika aplikasi (Models, Controllers, dll.)
+├── bootstrap/                  # Bootstrap framework
+├── config/                     # File konfigurasi
+├── database/                   # Migrasi, seeder, factory
+├── public/                     # Entry point & aset publik
+├── resources/
+│   └── views/
+│       ├── layouts/
+│       │   └── layout.blade.php        # Master layout (sidebar, header, footer)
+│       ├── home.blade.php              # Dashboard / halaman utama
+│       ├── jobs/
+│       │   ├── index.blade.php         # Daftar job (My Job List)
+│       │   ├── details.blade.php       # Detail job + Live Refreshing
+│       │   └── submit_modal.blade.php  # Modal step-by-step Submit Job
+│       ├── search.blade.php            # Search Analysis
+│       ├── contact.blade.php           # Halaman kontak
+│       ├── auth/                       # Login & Register
+│       └── welcome.blade.php           # Landing page publik
+├── routes/                     # Definisi rute
+├── storage/                    # File storage
+├── tests/                      # Unit & feature tests
+├── tailwind.config.js          # Konfigurasi design system
+├── vite.config.js              # Konfigurasi Vite
+├── composer.json               # Dependensi PHP
+├── package.json                # Dependensi Node.js
+└── vercel.json                 # Konfigurasi deployment Vercel
+```
+
+---
+
+## ⚙️ Instalasi & Penggunaan
+
+### Prasyarat
+
+- **PHP** ≥ 8.2
+- **Composer** ≥ 2.x
+- **Node.js** ≥ 18.x
+- **NPM** ≥ 9.x
+- **MySQL** / **SQLite**
+
+### Langkah Instalasi
+
+```bash
+# 1. Clone repository
+git clone https://github.com/laathiifaaz/ISNIP2026.git
+cd ISNIP2026
+
+# 2. Install dependensi PHP
+composer install
+
+# 3. Install dependensi Node.js
+npm install
+
+# 4. Salin file environment
+cp .env.example .env
+
+# 5. Generate application key
+php artisan key:generate
+
+# 6. Konfigurasi database di file .env
+# Sesuaikan DB_CONNECTION, DB_HOST, DB_PORT, DB_DATABASE, DB_USERNAME, DB_PASSWORD
+
+# 7. Jalankan migrasi database
+php artisan migrate
+
+# 8. Build asset front-end (development)
+npm run dev
+
+# 9. Jalankan server development
+php artisan serve
+```
+
+Aplikasi akan berjalan di `http://localhost:8000`
+
+### Build untuk Produksi
+
+```bash
+npm run build
+```
+
+---
+
+## 🏗️ Arsitektur
+
+```
+┌─────────────────────────────────────────────────────┐
+│                    Browser (Client)                  │
+│  ┌───────────┐  ┌───────────┐  ┌─────────────────┐ │
+│  │ Tailwind   │  │ Alpine.js │  │   Blade Views   │ │
+│  │ CSS        │  │ (Reactivity)│ │  (Templating)  │ │
+│  └───────────┘  └───────────┘  └─────────────────┘ │
+│                        │                             │
+│                   Vite (Build Tool)                  │
+└────────────────────────┬────────────────────────────┘
+                         │ HTTP
+┌────────────────────────┴────────────────────────────┐
+│                 Laravel 12 (Server)                   │
+│  ┌──────────┐  ┌──────────────┐  ┌───────────────┐  │
+│  │ Routes   │→ │ Controllers  │→ │    Models      │  │
+│  │          │  │ (Auth, Job,  │  │ (User, Job,    │  │
+│  │          │  │  Search, Home)│  │  Upload, etc.) │  │
+│  └──────────┘  └──────────────┘  └───────┬───────┘  │
+│                                          │           │
+│                                   ┌──────┴──────┐   │
+│                                   │  Database   │   │
+│                                   │ (MySQL/SQLite)│  │
+│                                   └─────────────┘   │
+└─────────────────────────────────────────────────────┘
+```
+
+### Pola Pewarisan Layout Blade
+
+```
+layouts/layout.blade.php  →  @yield('content')
+    ├── home.blade.php              →  @extends('layouts.layout')
+    ├── jobs/index.blade.php        →  @extends('layouts.layout')
+    │       └── jobs/submit_modal   →  @include()
+    ├── jobs/details.blade.php      →  @extends('layouts.layout')
+    ├── search.blade.php            →  @extends('layouts.layout')
+    └── contact.blade.php           →  @extends('layouts.layout')
+```
+
+---
+
+## 🧪 Pipeline Bioinformatika
+
+ISNIP mengintegrasikan alat-alat bioinformatika berikut dalam *pipeline* analisis SNP:
+
+| Tahap | Tool | Fungsi |
+|-------|------|--------|
+| 1. Quality Control | FastQC | Kontrol kualitas *reads* hasil sekuensing |
+| 2. Alignment | **Bowtie2** | Pemetaan *reads* ke genom referensi |
+| 3. SAM Processing | **Samtools** | Pemrosesan file *alignment* (*sorting*, *indexing*, *filtering*) |
+| 4. Variant Calling | **BCFtools** | Pemanggilan dan identifikasi varian SNP |
+
+> **Catatan:** Proyek ini berfokus pada *front-end* dan UI/UX. Integrasi *production-ready* dengan *core engine* bioinformatika berada di luar cakupan proyek ini.
+
+---
+
+## 👥 Tim Pengembang
+
+| Nama | NIM | Peran |
+|------|-----|-------|
+| **Lathiifa Zahra Yahya** | G6401231154 | Project Lead |
+| **Emi Purnawadi** | G6401231032 | Developer |
+| **Khalisha Rana Putri** | G6401231141 | Developer |
+| **Fikri Nurhaekal** | G6401231030 | Developer |
+
+**Institusi:** Sekolah Sains Data, Matematika, dan Informatika — IPB University
+
+**Periode:** Januari – Juni 2026
+
+---
+
+## 📄 Lisensi
+
+Proyek ini dikembangkan sebagai bagian dari Capstone Project di IPB University. Framework Laravel yang digunakan adalah perangkat lunak *open-source* berlisensi [MIT license](https://opensource.org/licenses/MIT).
+
+---
+
+## 🙏 Ucapan Terima Kasih
+
+- **IPB University** — Sekolah Sains Data, Matematika, dan Informatika
+- **Dosen Pembimbing** — Atas bimbingan dan arahan selama pengembangan proyek
+- **Laravel Community** — Framework PHP yang elegan dan powerful
+- **Tailwind CSS** — *Utility-first CSS framework* yang luar biasa
+- **Alpine.js** — Reaktivitas ringan untuk antarmuka modern
+
+---
+
+<p align="center">
+  <sub>Built with ❤️ at IPB University © 2026</sub>
+</p>
