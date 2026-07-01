@@ -24,19 +24,6 @@
 
 Proyek ini merupakan **redesign menyeluruh** pada antarmuka pengguna (UI/UX) aplikasi ISNIP, yang mentransformasi tampilan lama yang kaku dan non-responsif menjadi antarmuka modern, intuitif, dan sepenuhnya responsif menggunakan *tech stack* front-end terkini.
 
-### ✨ Mengapa ISNIP 2026?
-
-| Aspek | Versi Lama ❌ | Versi Baru ✅ |
-|-------|:----------:|:----------:|
-| UI Modern & Responsif | Tata letak statis, non-responsif | Flexbox/Grid, sepenuhnya responsif |
-| Upload Data | Bergantung pada administrator | *Self-service* melalui antarmuka web |
-| Alur *Job Submission* | Formulir tunggal yang padat | Modal interaktif *step-by-step* |
-| Pemantauan *Job* | Tidak informatif | *Badge* status berwarna + *Live Refreshing* |
-| Tech Stack | Teknologi usang | Laravel 12 + Tailwind CSS + Alpine.js + Vite |
-| Navigasi | Tidak terstruktur | *Sidebar* berbasis *workflow* dengan indikator aktif |
-| Validasi Input | Hanya *server-side* | *Client-side* (Alpine.js) + *server-side* |
-| Aksesibilitas Perangkat | Hanya *desktop* tertentu | *Desktop*, *tablet*, dan *mobile* |
-
 ---
 
 ## 🚀 Fitur Utama
@@ -87,15 +74,6 @@ Proyek ini merupakan **redesign menyeluruh** pada antarmuka pengguna (UI/UX) apl
 | **Vite** | 5.x | *Build tool* dengan HMR instan & *production bundling* |
 | **PHP** | ≥ 8.2 | Bahasa pemrograman *backend* |
 | **MySQL/SQLite** | - | Basis data |
-
-### 🎨 Design System
-
-Sistem desain kustom didefinisikan melalui `tailwind.config.js`:
-
-- **Brand Colors** — `brand-primary` (#1E3A5F), `brand-mid` (#1D4E8F), `brand-light` (#2D6BC4), `brand-subtle` (#EEF4FF)
-- **Surface Colors** — `surface-page` (#F0F4F8), `surface-card` (#FFFFFF), `surface-sidebar` (#1E3A5F)
-- **Text Colors** — `text-primary` (#1A2332), `text-secondary` (#4A5568), `text-muted` (#718096)
-- **Typography** — *Instrument Sans*, *Inter* (UI), *JetBrains Mono* (data teknis)
 
 ---
 
@@ -213,18 +191,6 @@ npm run build
 └─────────────────────────────────────────────────────┘
 ```
 
-### Pola Pewarisan Layout Blade
-
-```
-layouts/layout.blade.php  →  @yield('content')
-    ├── home.blade.php              →  @extends('layouts.layout')
-    ├── jobs/index.blade.php        →  @extends('layouts.layout')
-    │       └── jobs/submit_modal   →  @include()
-    ├── jobs/details.blade.php      →  @extends('layouts.layout')
-    ├── search.blade.php            →  @extends('layouts.layout')
-    └── contact.blade.php           →  @extends('layouts.layout')
-```
-
 ---
 
 ## 🧪 Pipeline Bioinformatika
@@ -260,16 +226,6 @@ ISNIP mengintegrasikan alat-alat bioinformatika berikut dalam *pipeline* analisi
 ## 📄 Lisensi
 
 Proyek ini dikembangkan sebagai bagian dari Capstone Project di IPB University. Framework Laravel yang digunakan adalah perangkat lunak *open-source* berlisensi [MIT license](https://opensource.org/licenses/MIT).
-
----
-
-## 🙏 Ucapan Terima Kasih
-
-- **IPB University** — Sekolah Sains Data, Matematika, dan Informatika
-- **Dosen Pembimbing** — Atas bimbingan dan arahan selama pengembangan proyek
-- **Laravel Community** — Framework PHP yang elegan dan powerful
-- **Tailwind CSS** — *Utility-first CSS framework* yang luar biasa
-- **Alpine.js** — Reaktivitas ringan untuk antarmuka modern
 
 ---
 
